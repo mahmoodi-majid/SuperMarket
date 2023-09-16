@@ -3,7 +3,7 @@ import "./navbarStyle.css"
 
 export default function NavBar() {
   return (
-    <div>
+    <div className='NavBar'>
       <ul className="navBar">
         <li className="navBarItems">Home</li>
         <li className="navBarItems">News</li>
