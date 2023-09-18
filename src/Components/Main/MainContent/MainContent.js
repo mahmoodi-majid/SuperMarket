@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import HeaderMain from "../HeaderMin/HeaderMain";
 import ShowProducts from "../ShowProducts/ShowProducts";
 import "./mainContentstyle.css";
+import FooterMain from "../FooterMain/FooterMain";
+
 export default function MainContent() {
   const [products, setProducts] = useState([
     {
@@ -62,10 +64,13 @@ export default function MainContent() {
     });
   };
 
+
+
   return (
     <>
       <HeaderMain />
       <div className="ShowProducts">
+
         {products.map((item) => {
           return (
             <ShowProducts
@@ -75,7 +80,9 @@ export default function MainContent() {
             />
           );
         })}
+
       </div>
+      <FooterMain/>
     </>
   );
 }

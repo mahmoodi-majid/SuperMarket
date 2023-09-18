@@ -1,0 +1,36 @@
+.cardHeader {
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardTitle h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.cardTitleItem {
+  display: flex;
+  
+}
+.cartNvbar {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-right: 5.5em;
+  padding-bottom: 10px;
+  margin-left: 5em;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+.cardItem {
+  width: 45%;
+}
+.cardPrice {
+  width: 20%;
+}
+.cardQuantty {
+  width: 35%;
+}
