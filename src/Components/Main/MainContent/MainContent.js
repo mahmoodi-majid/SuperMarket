@@ -41,12 +41,39 @@ export default function MainContent() {
       imgSrc: "/IMG/cheese.webp",
     },
   ]);
+  const [addProductsBasket, setProductsBasket] = useState([]);
+
+  let addProducts = (id) => {
+    products.filter((products) => {
+      let newProduct = {
+        id: addProductsBasket.length + 1,
+        name: products.name,
+        type: products.type,
+        Amount: products.Amount,
+        Price: products.Price,
+        NeedFridge: products.NeedFridge,
+        imgSrc: products.imgSrc,
+      };
+      if (products.id === id) {
+        setProductsBasket((prevState) => {
+          return [...prevState, newProduct];
+        });
+      }
+    });
+  };
+
   return (
     <>
       <HeaderMain />
       <div className="ShowProducts">
         {products.map((item) => {
-          return <ShowProducts key={item.id} products={item} />;
+          return (
+            <ShowProducts
+              key={item.id}
+              products={item}
+              addProducts={addProducts}
+            />
+          );
         })}
       </div>
     </>
